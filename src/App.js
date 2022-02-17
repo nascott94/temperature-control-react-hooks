@@ -2,43 +2,14 @@ import React, { useState } from 'react';
 import './styles.css';
 
 const App = () => {
-  //usestate to set value and color od temperature
+  //to do
+  //use state to set base temperature value and color and then update based on conditional statements
+  //will need two helper functions one for increasing temperature and one for decreasing
+
   const [temperatureValue, setTemperatureValue] = useState(50);
-  const [temperatureColor, setTemperatureColor] = useState('cold');
+  const [temperatureColor, setTemperatureColor] = useState('blue');
 
-  const increaseTemperature = () => {
-    if (temperatureValue === 100) return;
-    const newTemperature = temperatureValue + 1;
-
-    setTemperatureValue(newTemperature);
-    if (newTemperature >= 59) {
-      setTemperatureColor('hot');
-    }
-  };
-
-  const decreaseTemperature = () => {
-    if (temperatureValue === 0) return;
-    const newTemperature = temperatureValue - 1;
-
-    setTemperatureValue(newTemperature);
-    if (newTemperature < 68) {
-      setTemperatureColor('cold');
-    }
-  };
-
-  return (
-    <div className="app-container">
-      <div className="temperature-display-container">
-        <div className={`temperature-display ${temperatureColor}`}>
-          {temperatureValue}°F
-        </div>
-      </div>
-      <div className="button-container">
-        <button onMouseDown={increaseTemperature}>+</button>
-        <button onClick={decreaseTemperature}>-</button>
-      </div>
-    </div>
-  );
+  return <div className="app-container">hello joji hi</div>;
 };
 
 export default App;
